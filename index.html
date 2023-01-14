@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      http-equiv="Content-Type"
+      content="text/html; charset=UTF-8, width=device-width, initial-scale=1.0"
+    />
+    <title>中文维基百科</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇭🇰</text></svg>"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+      }
+      span {
+        font-size: 3vw;
+        display: none;
+      }
+      @media screen and (min-width: 1000px) {
+        .main {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 10%;
+          float: left;
+          width: 75%;
+        }
+        .action {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          float: left;
+          width: 20%;
+        }
+      }
+
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 250px;
+        margin-top: 0%;
+      }
+      .action {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #word {
+        font-size: 5vw;
+        word-break: break-all;
+        text-align: center;
+        margin-top: 33%;
+      }
+      #button1,
+      #button2 {
+        font-size: 10vw;
+        border: none;
+        background: none;
+        margin-top: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="main">
+        <p id="word"></p>
+      </div>
+      <div class="action">
+        <p id="button1"></p>
+        <button id="button1" onclick="random()">🔀</button>
+        <button id="button2" onclick="toggleSpanElements()">🈸</button>
+      </div>
+    </section>
+    <script>
+      var button1 = document.getElementById("button1");
+      var word = document.getElementById("word");
+
+      var arr = [
+        "<h1>零</h1>líng<br><span>0</span>",
+        "<h1>一</h1>yī<br><span>1</span>",
+        "<h1>二</h1>èr<br><span>2</span>",
+        "<h1>三</h1>sān<br><span>3</span>",
+        "<h1>四</h1>sì<br><span>4</span>",
+        "<h1>五</h1>wǔ<br><span>5</span>",
+        "<h1>六</h1>liù<br><span>6</span>",
+        "<h1>七</h1>qī<br><span>7</span>",
+        "<h1>八</h1>bā<br><span>8</span>",
+        "<h1>九</h1>jiǔ<br><span>9</span>",
+        "<h1>十</h1>shí<br><span>10</span>",
+        //"<h1></h1><br><span></span>",
+      ];
+
+      button1.innerHTML = "";
+
+      function random() {
+        word.innerHTML = arr[Math.floor(Math.random() * arr.length)];
+      }
+
+      function toggleSpanElements() {
+        var span = document.querySelector("span");
+        span.style.display = "block";
+      }
+    </script>
+    <footer></footer>
+  </body>
+</html>
