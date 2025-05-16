@@ -29,7 +29,7 @@
       font-size: 3vw;
       font-style: italic;
       height: 30px;
-      display: block;
+      display: inline-block;
       color: #212121;
     }
     .word-container {
@@ -57,6 +57,7 @@
       opacity: 0;
       color: #F5F5F5;
       transition: opacity 0.3s ease;
+      text-align: center;
     }
     .meaning.visible {
       opacity: 1;
@@ -236,6 +237,7 @@
       meanings.forEach(function(meaning) {
         meaning.classList.toggle("visible");
       });
+
     }
   </script>
   <footer></footer>
