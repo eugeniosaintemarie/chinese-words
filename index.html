@@ -232,12 +232,12 @@
     function random() {
       word.innerHTML = arr[Math.floor(Math.random() * arr.length)];
     }
+    document.addEventListener('DOMContentLoaded', random);
     function toggleSpanElements() {
       var meanings = document.querySelectorAll(".meaning");
       meanings.forEach(function(meaning) {
         meaning.classList.toggle("visible");
       });
-
     }
   </script>
   <footer></footer>
